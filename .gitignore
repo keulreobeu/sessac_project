@@ -1,0 +1,43 @@
+# ==============================
+# 데이터 파일 (이미지, 영상, npz, csv)
+# ==============================
+*.jpg
+*.jpeg
+*.png
+*.bmp
+*.gif
+*.mp4
+*.avi
+*.mov
+*.csv
+*.npz
+*.npy
+*.zip
+
+# ==============================
+# 데이터 폴더
+# ==============================
+out_video/
+video/
+frames/
+dataset/
+data/
+results/
+output/
+labels/
+tmp/
+
+# ==============================
+# 파이썬 및 환경 파일
+# ==============================
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# VSCode 환경
+.vscode/
+*.code-workspace
+
+# OS 파일
+.DS_Store
+Thumbs.db
