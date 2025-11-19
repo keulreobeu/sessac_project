@@ -19,24 +19,24 @@ def main():
         return
 
     # 해상도 / FPS 설정 (카메라에 따라 완벽히 적용 안 될 수도 있음)
-    cap.set(cv2.CAP_PROP_FRAME_WIDTH, width)
-    cap.set(cv2.CAP_PROP_FRAME_HEIGHT, height)
+    # cap.set(cv2.CAP_PROP_FRAME_WIDTH, width)
+    # cap.set(cv2.CAP_PROP_FRAME_HEIGHT, height)
     # cap.set(cv2.CAP_PROP_FPS, fps)  # 필요하면 사용, 일단은 기본 값 사용
 
     # === 노출(셔터 속도) 설정 ===
-    print("[INFO] 초기 노출값:", cap.get(cv2.CAP_PROP_EXPOSURE))
+    # print("[INFO] 초기 노출값:", cap.get(cv2.CAP_PROP_EXPOSURE))
 
     # 1) 자동 노출 끄기 (카메라/드라이버마다 다르게 동작할 수 있음)
     #    안 먹는 카메라도 많으니, 일단 시도해보고 값이 안 바뀌면
     #    제조사 유틸(로지텍 G HUB 등)에서 수동 노출 설정해야 할 수도 있음
-    try:
-        cap.set(cv2.CAP_PROP_AUTO_EXPOSURE, 0.25)  # 일부 백엔드에서 "수동" 모드 의미
-    except Exception:
-        pass
+    # try:
+    #     cap.set(cv2.CAP_PROP_AUTO_EXPOSURE, 0.25)  # 일부 백엔드에서 "수동" 모드 의미
+    # except Exception:
+    #     pass
 
     # 2) 수동 노출값 설정 (값의 스케일은 장치별로 다름)
-    cap.set(cv2.CAP_PROP_EXPOSURE, -9)
-    print("[INFO] 설정 후 노출값:", cap.get(cv2.CAP_PROP_EXPOSURE))
+    # cap.set(cv2.CAP_PROP_EXPOSURE, -9)
+    # print("[INFO] 설정 후 노출값:", cap.get(cv2.CAP_PROP_EXPOSURE))
 
     # === 비디오 저장 설정 ===
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')  # 안 되면 'XVID' + .avi 로 변경
